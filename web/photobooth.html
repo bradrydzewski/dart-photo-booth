@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photobooth</title>
+    <style>
+      html, body {
+        overflow:hidden;
+      }
+      canvas {
+        width:640px;
+        height:480px;
+        display:none;
+      }
+      video {
+        width:100%;
+        height:100%;
+      }
+      #photos {
+        position:absolute;
+        top:0px;
+        left:0px;
+        right:0px;
+        height:100px;
+        white-space: nowrap;
+        display:block;
+        border:none;
+        background:black;
+        border-top: 25px solid #000;
+        border-bottom: 25px solid #000;
+        border-image:url(http://i.imgur.com/Sm9CNai.png) 25 repeat;
+      }
+      #photos img {
+        height:100%;
+        display:inline-block;
+        margin-left:10px;
+        margin-right:10px;
+      }
+      #video-wrapper {
+        position:absolute;
+        top:150px;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        text-align:center;
+        vertical-align:middle;
+        background:black;
+        padding:10px;
+      }
+    </style>
+  </head>
+ 
+  <body>
+  
+    <div id="photos"></div>
+    <div id="video-wrapper">
+      <video id="video"></video>
+      <canvas id="canvas"></canvas>
+    </div>
+    
+    <script type="application/dart" src="photobooth.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+name: photo_booth
+version: 0.0.1
+dependencies:
+  browser: any
+  unittest: any
