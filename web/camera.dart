@@ -22,13 +22,13 @@ abstract class Camera {
 }
 
 class Webcam extends Camera {
-  VideoElement video;
+  final VideoElement video;
   CanvasElement canvas;
   CanvasRenderingContext2D ctx;
   
-  Webcam(VideoElement video) {
-    this.video = video..autoplay=true;
-    
+  Webcam(this.video) {
+    this.video.autoplay=true;
+
     // create a canvas an append to the body.
     // the canvas will be used to snapshot
     // an image frame from the webcam stream.
