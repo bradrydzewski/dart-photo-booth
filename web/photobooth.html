@@ -49,6 +49,35 @@
         background:black;
         padding:10px;
       }
+      #button {
+        position:absolute;
+        top:50%;
+        left:50%;
+        display:inline-block;
+        padding:20px;
+        color:#FFF;
+        width:300px;
+        height:100px;
+        margin-top: -50px;
+        margin-left: -150px;
+        font-size:22px;
+        background: rgba(255,255,255, 0.5);
+        border: 3px solid #FFF;
+        border-radius:3px;
+      }
+      #countdown {
+        z-index:1;
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        color:#FFF;
+        font-size:30vw;
+      }
+      .hidden {
+        display:none !IMPORTANT;
+      }
     </style>
   </head>
  
@@ -56,8 +85,9 @@
   
     <div id="photos"></div>
     <div id="video-wrapper">
+      <div id="countdown" class="hidden"></div>
+      <button id="button">Tap to Take Photograph</button>
       <video id="video"></video>
-      <canvas id="canvas"></canvas>
     </div>
     
     <script type="application/dart" src="photobooth.dart"></script>
