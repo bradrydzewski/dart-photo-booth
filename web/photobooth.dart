@@ -4,6 +4,8 @@ import 'storage.dart';
 import 'camera.dart';
 
 main() {
+  document.body.requestFullscreen();
+  
   var camera = new Webcam(querySelector("#video"));
   var storage = new RemoteStorage();
   new PhotoBooth(camera,storage);
