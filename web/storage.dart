@@ -22,7 +22,8 @@ class RemoteStorage extends Store {
     
     var time = new DateTime.now().millisecondsSinceEpoch;
     var data = new Map();
-    data["id"] = time;
+    data["time"] = time;
+    data["image"] = img;
     
     // TODO: find time to handle exceptions and avoid
     // havint to use try / catch blocks.
@@ -33,16 +34,6 @@ class RemoteStorage extends Store {
       postKeyRequest
         ..open("POST", "https://flickering-fire-7106.firebaseio.com/images.json")
         ..send(JSON.encode(data));
-  
-      // then post the image with the key equal to the timestamp.
-      // this allows us to retrieve a list of all images without
-      // having to retrieve the image data.
-      //data = new Map();
-      //data["image"] = img;
-      var postBlobRequest = new HttpRequest();
-      postBlobRequest
-        ..open("PUT", "https://flickering-fire-7106.firebaseio.com/blobs/${time}.json")
-        ..send(JSON.encode(img));
       
     }catch(e){
       print(e);
