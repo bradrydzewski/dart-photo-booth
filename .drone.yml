@@ -1,6 +1,7 @@
 image: dart
 script:
-  - dart_analyzer bin/photobooth.dart
+  - pub install
+  - dartanalyzer web/photobooth.dart
   - pub build
 
 deploy:
