@@ -3,6 +3,9 @@ script:
   - pub install
   - dartanalyzer web/photobooth.dart
   - pub build
+  - ls -la
+  - ls -la build
+  - ls -la build/web
 
 publish:
   s3:
@@ -11,5 +14,5 @@ publish:
     bucket: googleio-photobooth
     access_key: $AWS_KEY
     secret_key: $AWS_SECRET
-    source: build/web
+    source: build/
     target: photobooth/
