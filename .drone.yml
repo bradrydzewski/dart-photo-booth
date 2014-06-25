@@ -3,9 +3,6 @@ script:
   - pub install
   - dartanalyzer web/photobooth.dart
   - pub build
-  - ls -la
-  - ls -la build
-  - ls -la build/web
 
 publish:
   s3:
