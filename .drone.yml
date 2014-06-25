@@ -13,3 +13,4 @@ publish:
     secret_key: $AWS_SECRET
     source: build
     target: photobooth/
+    recursive: true
