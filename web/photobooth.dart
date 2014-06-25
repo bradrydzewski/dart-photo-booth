@@ -5,7 +5,7 @@ import 'camera.dart';
 
 main() {
   var camera = new Webcam(querySelector("#video"));
-  var storage = new RemoteStorage("");
+  var storage = new RemoteStorage();
   new PhotoBooth(camera,storage);
 }
 

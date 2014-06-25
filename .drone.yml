@@ -1,0 +1,14 @@
+image: dart
+script:
+  - dart_analyzer bin/photobooth.dart
+  - pub build
+
+deploy:
+  s3:
+    acl: public-read
+    region: us-east-1
+    bucket: googleio-photobooth
+    access_key: $AWS_KEY
+    secret_key: $AWS_SECRET
+    source: build/web/
+    target: photobooth/
