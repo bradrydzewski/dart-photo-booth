@@ -14,3 +14,4 @@ publish:
     source: build
     target: photobooth/
     recursive: true
+
