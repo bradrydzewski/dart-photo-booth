@@ -31,7 +31,7 @@ class RemoteStorage extends Store {
       // based on the timestamp.
       var postKeyRequest = new HttpRequest();
       postKeyRequest
-        ..open("POST", "https://flickering-fire-7106.firebaseio.com/images.json", async: false)
+        ..open("POST", "https://flickering-fire-7106.firebaseio.com/images.json")
         ..send(JSON.encode(data));
   
       // then post the image with the key equal to the timestamp.
@@ -41,7 +41,7 @@ class RemoteStorage extends Store {
       //data["image"] = img;
       var postBlobRequest = new HttpRequest();
       postBlobRequest
-        ..open("PUT", "https://flickering-fire-7106.firebaseio.com/blobs/${time}.json", async: false)
+        ..open("PUT", "https://flickering-fire-7106.firebaseio.com/blobs/${time}.json")
         ..send(JSON.encode(img));
       
     }catch(e){
