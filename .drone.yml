@@ -11,5 +11,5 @@ publish:
     bucket: googleio-photobooth
     access_key: $AWS_KEY
     secret_key: $AWS_SECRET
-    source: build/
+    source: build
     target: photobooth/
