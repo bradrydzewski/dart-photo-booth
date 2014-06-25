@@ -8,7 +8,7 @@ publish:
   s3:
     acl: public-read
     region: us-east-1
-    bucket: googleio-photobooth
+    bucket: googleio.bradrydzewski.com
     access_key: $AWS_KEY
     secret_key: $AWS_SECRET
     source: build
